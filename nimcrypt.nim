@@ -36,7 +36,7 @@ let inspiration = """
 `---' .'.''-._.-'`_./  /\ '.  \ _.-~~~````~~~-._`-.__.'             
       | |  .' _.-' |  |  \  \  '.               `~---`              
        \ \/ .'     \  \   '. '-._)                                  
-        \/ /        \  \    `=.__`~-.   Nimcrypt v2               
+        \/ /        \  \    `=.__`~-.   Nimcrypt v3   By SantaderGodDB             
    jgs  / /\         `) )    / / `"".`\                             
   , _.-'.'\ \        / /    ( (     / /  3-in-1 C#, PE, & Raw Shellcode Loader
    `--~`   ) )    .-'.'      '.'.  | (                              
@@ -76,7 +76,7 @@ Options:
 let args = docopt(doc, version = "Nimcrypt 2.0")
 
 # Geneate Random Encryption Key
-let chars = {'a'..'z','A'..'Z'}
+let chars = {'a'..'z','A'..'Z','0'..'9', '!','@','#','$','%','^','&','*'}
 randomize()
 var envkey = collect(newSeq, (for i in 0..<32: chars.sample)).join
 
